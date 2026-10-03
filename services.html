@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - หลักสูตรทั้งหมด IT Camp</title>
+    <!-- โหลด Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- โหลด CSS ของเรา (ระบบเรืองแสง) -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- 1. Navbar (ดึงมาจาก script.js อัตโนมัติ) -->
+    <div id="navbar-container" class="highlight-box" data-description="Navbar: ดึงโค้ดมาจาก script.js อัตโนมัติในทุกหน้า"></div>
+
+    <!-- ส่วนเนื้อหาหลัก -->
+    <main class="container my-5">
+        <!-- Component ที่ 10: Breadcrumb แบบแสดงสถานะหน้าปัจจุบัน (กดไม่ได้) -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <!-- หน้าอื่นๆ ให้เป็นสีเทา (text-muted) --><!-- หน้าปัจจุบัน ให้เป็นสีน้ำเงินและตัวหนา (text-primary fw-bold) -->
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">Home</li>
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">About</li>
+                <li class="breadcrumb-item active text-primary fw-bold" aria-current="page">Services</li>
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">Contact</li>
+            </ol>
+        </nav>
+        
+        <!-- หัวข้อประจำหน้า -->
+        <div class="text-center mb-5 highlight-box" data-description="ส่วนหัวหน้า Services: หัวข้อและคำอธิบายรวม">
+            <h1 class="fw-bold text-primary">หลักสูตรของเรา (Services & Courses)</h1>
+            <p class="lead text-muted">เลือกเรียนหลักสูตร IT ที่เหมาะกับเป้าหมายของคุณ</p>
+        </div>
+
+        <!-- แสดงข้อมูล 6 รายการ ด้วย Bootstrap Card ในรูปแบบ คอลัมน์ (Grid System) -->
+        <div class="row g-4">
+
+            <!-- รายการที่ 1 (แถวที่ 1 - คอลัมน์ซ้าย) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm highlight-box tooltip-top-left" data-description="รายการที่ 1: Web Development">
+                    <img src="image/Developer.jfif" class="card-img-top" alt="Web Dev" style="height: 195px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger">🔥 ยอดนิยม</span>
+                            <small class="text-muted">40 ชั่วโมง</small>
+                        </div>
+                        <h5 class="card-title">1. Web Development</h5>
+                        <p class="card-text text-muted">เรียนรู้การพัฒนาเว็บหน้าบ้านและหลังบ้านด้วย HTML5, CSS3, JavaScript และ Node.js</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#courseModal1">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- รายการที่ 2 (แถวที่ 1 - คอลัมน์กลาง) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm highlight-box tooltip-top" data-description="รายการที่ 2: Mobile App Dev">
+                    <img src="image/Mobile.jfif" class="card-img-top" alt="App Dev" style="height: 195px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-success">✨ มาใหม่</span>
+                            <small class="text-muted">45 ชั่วโมง</small>
+                        </div>
+                        <h5 class="card-title">2. Mobile App Development</h5>
+                        <p class="card-text text-muted">สร้างแอปพลิเคชันมือถือแบบ Cross-platform รองรับทั้ง iOS และ Android ด้วย Flutter</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#courseModal2">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- รายการที่ 3 (แถวที่ 1 - คอลัมน์ขวา) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm highlight-box tooltip-top-right" data-description="รายการที่ 3: Data Science & AI">
+                    <img src="image/Data.jfif" class="card-img-top" alt="Data Science" style="height: 195px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-info text-dark">⭐ แนะนำ</span>
+                            <small class="text-muted">50 ชั่วโมง</small>
+                        </div>
+                        <h5 class="card-title">3. Data Science & AI</h5>
+                        <p class="card-text text-muted">วิเคราะห์ข้อมูล ตัดสินใจทางธุรกิจ และพัฒนาโมเดล Machine Learning ด้วย Python</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#courseModal3">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- รายการที่ 4 (แถวที่ 2 - คอลัมน์ซ้าย) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm highlight-box tooltip-top-left" data-description="รายการที่ 4: Cyber Security">
+                    <img src="image/Security.jfif" class="card-img-top" alt="Cyber Security" style="height: 195px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning text-dark">🛡️ ปลอดภัย</span>
+                            <small class="text-muted">35 ชั่วโมง</small>
+                        </div>
+                        <h5 class="card-title">4. Cyber Security</h5>
+                        <p class="card-text text-muted">เรียนรู้ความมั่นคงปลอดภัยไซเบอร์ การป้องกันการโจมตีและการวิเคราะห์ภัยคุกคาม</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#courseModal4">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- รายการที่ 5 (แถวที่ 2 - คอลัมน์กลาง) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm highlight-box tooltip-top" data-description="รายการที่ 5: Cloud Computing">
+                    <img src="image/Cloud.jfif" class="card-img-top" alt="Cloud Computing" style="height: 195px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-secondary">☁️ Cloud</span>
+                            <small class="text-muted">30 ชั่วโมง</small>
+                        </div>
+                        <h5 class="card-title">5. Cloud Computing</h5>
+                        <p class="card-text text-muted">ออกแบบและบริหารจัดการระบบบน Cloud ด้วย AWS และ Microsoft Azure</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#courseModal5">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- รายการที่ 6 (แถวที่ 2 - คอลัมน์ขวา) -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm highlight-box tooltip-top-right" data-description="รายการที่ 6: UX/UI Design">
+                    <img src="image/UX_UI_Design.jfif" class="card-img-top" alt="UX UI Design" style="height: 195px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-primary">🎨 Design</span>
+                            <small class="text-muted">25 ชั่วโมง</small>
+                        </div>
+                        <h5 class="card-title">6. UX/UI Design</h5>
+                        <p class="card-text text-muted">วางโครงร่าง (Wireframe) และออกแบบหน้าจอแอปพลิเคชันให้ใช้งานง่ายด้วย Figma</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#courseModal6">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap Component: Modal แสดงรายละเอียดตัวอย่าง (ใช้ร่วมกับปุ่มกด) -->
+    <div class="modal fade" id="courseModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">💻 รายละเอียดหลักสูตร Web Development</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>เหมาะสำหรับ:</strong> ผู้เริ่มต้นที่ต้องการสร้างเว็บไซต์ได้จริงตั้งแต่พื้นฐาน</p>
+                    <p><strong>สิ่งที่ได้เรียนรู้:</strong> HTML5, CSS3, Bootstrap 5, JavaScript, และ Git</p>
+                    <p><strong>ค่าลงทะเบียน:</strong> 2,900 บาท (รับวุฒิบัตรหลังเรียนจบ)</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                    <a href="contact.html" class="btn btn-primary">สมัครเรียนหลักสูตรนี้</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Footer (ดึงมาจาก script.js อัตโนมัติ) -->
+    <div id="footer-container"></div>
+
+    <!-- โหลด JavaScript ของ Bootstrap และไฟล์ script.js ของเรา -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+</html>

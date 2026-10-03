@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - เกี่ยวกับ IT Camp</title>
+    <!-- โหลด Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- โหลด CSS ของเรา (ระบบเรืองแสง) -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- 1. Navbar (กล่องรอรับเมนูจาก JavaScript อัตโนมัติ) -->
+    <div id="navbar-container" class="highlight-box" data-description="Navbar: ดึงโค้ดมาจาก script.js อัตโนมัติในทุกหน้า"></div>
+
+    <!-- ส่วนเนื้อหาหลักของหน้า About -->
+    <main class="container my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <!-- หน้าอื่นๆ ให้เป็นสีเทา (text-muted) --><!-- หน้าปัจจุบัน ให้เป็นสีน้ำเงินและตัวหนา (text-primary fw-bold) -->
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">Home</li>
+                <li class="breadcrumb-item active text-primary fw-bold" aria-current="page">About</li>
+                <li class="breadcrumb-item active text-primary fw-bold text-muted" >Services</li>
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">Contact</li>
+            </ol>
+        </nav>
+        
+        <!-- แถวที่ 1: หัวข้อเว็บไซต์, รายละเอียด, รูปภาพ และ Button -->
+        <div class="row align-items-center mb-5">
+            
+            <!-- คอลัมน์ซ้าย: รูปภาพ -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="highlight-box tooltip-top-left" data-description="Logo: รูปภาพ">
+                    <img src="image/logo.jfif" class="img-fluid rounded shadow" alt="เกี่ยวกับเรา">
+                </div>
+            </div>
+
+            <!-- คอลัมน์ขวา: หัวข้อ, รายละเอียด, ปุ่ม -->
+            <div class="col-md-6">
+                <div class="highlight-box tooltip-top-right" data-description="Details: หัวข้อ, รายละเอียด และอื่นๆ">
+                    <!-- หัวข้อเว็บไซต์ -->
+                    <h1 class="text-primary fw-bold mb-3">เกี่ยวกับ IT Camp</h1>
+                    
+                    <!-- รายละเอียดเกี่ยวกับเว็บไซต์ -->
+                    <p class="lead text-muted">
+                        ศูนย์รวมการเรียนรู้ทักษะสายไอทีที่ออกแบบมาเพื่อทุกคน ไม่ว่าคุณจะไม่มีพื้นฐาน หรือต้องการอัปสกิลเพื่อเปลี่ยนสายงาน เรามีหลักสูตรที่ตอบโจทย์ความต้องการของตลาดงานในปัจจุบัน
+                    </p>
+                    <p>
+                        เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำหลักสูตรและเป็นแหล่งข้อมูลสำหรับผู้ที่สนใจการเขียนโปรแกรม การสร้างเว็บไซต์ แอปพลิเคชัน และวิทยาการข้อมูล (Data Science)
+                    </p>
+
+                    <!-- Button -->
+                    <a href="contact.html" class="btn btn-primary btn-lg mt-3">ติดต่อสอบถามเพิ่มเติม</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- แถวที่ 2: Card หรือ Information Section -->
+        <hr class="my-5">
+        
+        <div class="highlight-box" data-description="Card: ใช้ Card 3 ใบอธิบายจุดเด่น">
+            <h3 class="text-center mb-4">ทำไมต้องเรียนกับเรา? (Information Section)</h3>
+            <div class="row text-center">
+                
+                <div class="col-md-4 mb-3">
+                    <div class="card border-primary h-100 shadow-sm highlight-box tooltip-top-left" data-description="Card 1: จุดเด่นที่ 1">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary">👨‍🏫</h4>
+                            <h5 class="card-title">ผู้สอนเชี่ยวชาญ</h5>
+                            <p class="card-text">เรียนรู้จากผู้มีประสบการณ์ทำงานจริงในวงการ Tech ชั้นนำ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card border-success h-100 shadow-sm highlight-box tooltip-top" data-description="Card 2: จุดเด่นที่ 2">
+                        <div class="card-body">
+                            <h4 class="card-title text-success">📚</h4>
+                            <h5 class="card-title">เนื้อหาอัปเดตใหม่</h5>
+                            <p class="card-text">หลักสูตรปรับปรุงตามเทคโนโลยีล่าสุดของปีนี้</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="card border-danger h-100 shadow-sm highlight-box tooltip-top-right" data-description="Card 3: จุดเด่นที่ 3">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger">💻</h4>
+                            <h5 class="card-title">เน้นลงมือปฏิบัติ</h5>
+                            <p class="card-text">มีโปรเจกต์ให้ทำจริง จบแล้วมีผลงานใส่ Portfolio ทันที</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- โหลด JavaScript -->
+     <!-- กล่องรอรับ Footer จาก JavaScript -->
+    <div id="footer-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+</html>

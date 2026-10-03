@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Camp - แนะนำหลักสูตร IT</title>
+    <!-- โหลด Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- โหลด CSS ของเรา (ระบบเรืองแสง) -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- 1. Navbar (กล่องรอรับเมนูจาก JavaScript) -->
+    <div id="navbar-container" class="highlight-box" data-description="Navbar: ดึงโค้ดมาจาก script.js อัตโนมัติในทุกหน้า"></div>
+
+    <!-- 2. Hero Section + Carousel + ข้อความแนะนำ + Button (รวมไว้ด้วยกันตามโจทย์) -->
+    <header class="highlight-box" data-description="ส่วนที่ 2: Hero Section & Carousel (ภาพสไลด์)">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- ภาพสไลด์ที่ 1 -->
+                <div class="carousel-item active">
+                    <!-- รูปภาพ Carousel -->
+                    <img src="image/Welcome_to_IT_Camp.jfif" class="d-block w-100" alt="Banner 1" style="height: 400px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                        <!-- ข้อความแนะนำเว็บไซต์ -->
+                        <h2>เริ่มต้นเส้นทางสาย IT กับเรา</h2>
+                        <p>เรียนรู้ทักษะโปรแกรมมิ่งที่ตลาดต้องการมากที่สุด ทั้ง Web, App และ Data</p>
+                        <!-- Button / Call to Action -->
+                        <a href="services.html" class="btn btn-primary btn-lg">ดูหลักสูตรทั้งหมด</a>
+                    </div>
+                </div>
+                <!-- ภาพสไลด์ที่ 2 -->
+                <div class="carousel-item">
+                    <img src="image/Learn_with_Experts.jfif" class="d-block w-100" alt="Banner 2" style="height: 400px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                        <h2>สอนโดยผู้เชี่ยวชาญ</h2>
+                        <p>อัปสกิลของคุณกับผู้มีประสบการณ์จริงในอุตสาหกรรม</p>
+                        <a href="about.html" class="btn btn-success btn-lg">รู้จักกับเรามากขึ้น</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ปุ่มกดเลื่อนซ้าย-ขวา ของ Carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+        <main class="container my-5">
+            <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <!-- หน้าอื่นๆ ให้เป็นสีเทา (text-muted) --><!-- หน้าปัจจุบัน ให้เป็นสีน้ำเงินและตัวหนา (text-primary fw-bold) -->
+                <li class="breadcrumb-item active text-primary fw-bold" aria-current="page">Home</li>
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">About</li>
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">Services</li>
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">Contact</li>
+            </ol>
+        </nav>
+        </main>
+
+    <!-- 3. Card แสดงข้อมูลสำคัญอย่างน้อย 3 Card -->
+    <section class="container my-5 highlight-box" data-description="ส่วนที่ 3: Section แสดงเนื้อหาด้วยระบบ Grid (แถวและคอลัมน์)">
+        <h3 class="text-center mb-4">หลักสูตรแนะนำ</h3>
+        <div class="row">
+            
+            <!-- การ์ดที่ 1 (ซ้ายสุด): ดัน Tooltip ขึ้นบน-ชิดซ้าย -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm highlight-box tooltip-top-left" data-description="Card 1: ประกอบด้วยรูป, หัวข้อ และปุ่ม">
+                    <img src="image/Web_Development.png" class="card-img-top" alt="Web" style="height: 175px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">💻 Web Development</h5>
+                        <p class="card-text">สร้างเว็บไซต์ด้วย HTML, CSS และ JS</p>
+                        <a href="services.html" class="btn btn-outline-primary">รายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- การ์ดที่ 2 (ตรงกลาง): ดัน Tooltip ขึ้นบน-ตรงกลาง -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm highlight-box tooltip-top" data-description="Card 2: ข้อมูลหลักสูตรที่ 2">
+                    <img src="image/App_Development.avif" class="card-img-top" alt="App" style="height: 175px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">📱 App Development</h5>
+                        <p class="card-text">สร้างแอปพลิเคชันมือถือด้วย Flutter</p>
+                        <a href="services.html" class="btn btn-outline-primary">รายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- การ์ดที่ 3 (ขวาสุด): ดัน Tooltip ขึ้นบน-ชิดขวา -->
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm highlight-box tooltip-top-right" data-description="Card 3: ข้อมูลหลักสูตรที่ 3">
+                    <img src="image/Data_Science.avif" class="card-img-top" alt="Data" style="height: 175px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">📊 Data Science</h5>
+                        <p class="card-text">วิเคราะห์ข้อมูลพื้นฐานด้วย Python</p>
+                        <a href="services.html" class="btn btn-outline-primary">รายละเอียด</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- โหลด JavaScript ของ Bootstrap (เพื่อให้ Carousel และ Navbar ทำงาน) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- โหลด JavaScript ของเรา -->
+    <script src="JS/script.js"></script>
+    <!-- กล่องรอรับ Footer จาก JavaScript -->
+    <div id="footer-container"></div>
+</body>
+</html>

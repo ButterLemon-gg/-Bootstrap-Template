@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ติดต่อเรา IT Camp</title>
+    <!-- โหลด Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- โหลด CSS ของเรา (ระบบเรืองแสง) -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- 1. Navbar (ดึงมาจาก script.js อัตโนมัติ) -->
+    <div id="navbar-container" class="highlight-box" data-description="Navbar: ดึงโค้ดมาจาก script.js อัตโนมัติในทุกหน้า"></div>
+
+    <!-- ส่วนเนื้อหาหลัก -->
+    <main class="container my-5">
+    
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <!-- หน้าอื่นๆ ให้เป็นสีเทา (text-muted) --><!-- หน้าปัจจุบัน ให้เป็นสีน้ำเงินและตัวหนา (text-primary fw-bold) -->
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">Home</li>
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">About</li>
+                <li class="breadcrumb-item active text-primary fw-bold text-muted">Services</li>
+                <li class="breadcrumb-item active text-primary fw-bold" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+        
+        
+        <!-- หัวข้อประจำหน้า -->
+        <div class="text-center mb-5 highlight-box" data-description="ส่วนหัวหน้า Contact">
+            <h1 class="fw-bold text-primary">ติดต่อเรา (Contact Us)</h1>
+            <p class="lead text-muted">มีคำถามหรือข้อสงสัย? ส่งข้อความหาเราได้เลย เราพร้อมให้คำปรึกษา</p>
+        </div>
+
+        <div class="row g-5">
+            
+            <!-- คอลัมน์ซ้าย: ฟอร์มสำหรับติดต่อ -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm highlight-box tooltip-top-left" data-description="Form: ส่งข้อความที่ต้องการติดต่อ">
+                    <div class="card-body p-4">
+                        <h4 class="mb-4">ส่งข้อความถึงเรา (Form)</h4>
+                        <!-- Component ที่ 9: Alert แบบกดกากบาทปิดได้ -->
+                        <div class="alert alert-info alert-dismissible fade show" role="alert">
+                            <strong>📢 ประกาศ:</strong> ตอนนี้มีผู้สอบถามเข้ามาจำนวนมาก อาจใช้เวลาตอบกลับ 1-2 วันทำการครับ
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        
+                        <!-- ใส่ onsubmit เพื่อจำลองการกดส่งข้อความแล้วเด้ง Alert (ไม่รีเฟรชหน้าจริง) -->
+                        <form onsubmit="event.preventDefault(); alert('ขอบคุณที่ติดต่อเรา ระบบได้รับข้อความของคุณแล้วครับ!');">
+                            
+                            <!-- ชื่อ-นามสกุล -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">ชื่อ-นามสกุล <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullName" placeholder="นายเรียนดี ไอทีแคมป์" required>
+                            </div>
+                            
+                            <!-- Email และ เบอร์โทรศัพท์ (แบ่งครึ่งบรรทัดกัน) -->
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="emailInfo" class="form-label">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="emailInfo" placeholder="example@email.com" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phoneNumber" class="form-label">เบอร์โทรศัพท์</label>
+                                    <input type="tel" class="form-control" id="phoneNumber" placeholder="081-234-5678">
+                                </div>
+                            </div>
+
+                            <!-- หัวข้อ -->
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">หัวข้อ <span class="text-danger">*</span></label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="" selected disabled>-- เลือกหัวข้อที่ต้องการติดต่อ --</option>
+                                    <option value="1">สอบถามรายละเอียดหลักสูตร</option>
+                                    <option value="2">แจ้งปัญหาการใช้งานเว็บไซต์</option>
+                                    <option value="3">ติดต่อเรื่องอื่นๆ</option>
+                                </select>
+                            </div>
+
+                            <!-- รายละเอียด -->
+                            <div class="mb-4">
+                                <label for="message" class="form-label">รายละเอียด <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="พิมพ์ข้อความของคุณที่นี่..." required></textarea>
+                            </div>
+
+                            <!-- ปุ่ม Submit -->
+                            <button type="submit" class="btn btn-primary w-100">Submit (ส่งข้อมูล)</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- คอลัมน์ขวา: ข้อมูลการติดต่อ และ แผนที่ -->
+            <div class="col-lg-6">
+                <div class="highlight-box tooltip-top-right" data-description="contact: ข้อมูลการติดต่อ">
+                    <h4 class="mb-4">ข้อมูลการติดต่อ</h4>
+                    
+                    <!-- ข้อมูลการติดต่อ -->
+                    <ul class="list-unstyled mb-4 text-muted">
+                        <li class="mb-3"><strong>📍 ที่อยู่:</strong> 123 อาคารเรียนรู้ ไอทีแคมป์, ถนนวิทยุ กรุงเทพมหานคร 10110</li>
+                        <li class="mb-3"><strong>📞 โทรศัพท์:</strong> 02-123-4567</li>
+                        <li class="mb-3"><strong>✉️ Email:</strong> contact@itcamp.com</li>
+                        <li class="mb-3"><strong>⏰ เวลาทำการ:</strong> จันทร์ - ศุกร์ (09:00 - 18:00 น.)</li>
+                    </ul>
+
+                    <!-- แผนที่ (ใช้ iframe ของ Google Maps ฝังลงไป และใช้คลาส ratio ให้แผนที่ยืดหยุ่น) -->
+                    <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15502.82283893699!2d100.5284307612711!3d13.736717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2992a7e78083f%3A0xc667104b281f6d90!2sLumphini%20Park!5e0!3m2!1sen!2sth!4v1696225605809!5m2!1sen!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 2. Footer (ดึงมาจาก script.js อัตโนมัติ) -->
+    <div id="footer-container"></div>
+
+    <!-- โหลด JavaScript ของ Bootstrap และไฟล์ script.js ของเรา -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+</html>

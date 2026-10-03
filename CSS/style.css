@@ -1,0 +1,75 @@
+/* 1. ตั้งค่ากล่องพื้นฐาน (ก่อนเอาเมาส์ชี้) */
+.highlight-box {
+    border: 2px dashed transparent;
+    transition: all 0.3s ease; 
+    position: relative;
+}
+
+/* 2. เมื่อเอาเมาส์ชี้กล่อง: ให้มีกรอบเรืองแสงสีเขียว */
+.highlight-box:hover {
+    border: 2px dashed #00ff00; 
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); 
+    transform: scale(1.02); 
+    z-index: 10;
+    background-color: rgba(0, 255, 0, 0.05); 
+}
+
+/* ========================================================
+   ส่วนจัดการ Tooltip ป้ายคำอธิบาย (ค่าเริ่มต้นให้อยู่ด้านล่าง)
+   ======================================================== */
+
+.highlight-box:hover::before {
+    content: attr(data-description); 
+    position: absolute;
+    
+    /* ค่าเริ่มต้นให้อยู่ด้านล่าง สำหรับ header และ section */
+    bottom: -60px; 
+    top: auto; 
+    
+    /* ตั้งค่าให้ตัดบรรทัดเมื่อข้อความยาวเกิน */
+    white-space: normal; 
+    width: 220px; 
+    line-height: 1.4;
+    
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+
+    /* ให้อยู่ตรงกลาง */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* ========================================================
+   คลาสพิเศษสำหรับดัน Tooltip (สำหรับ Card ให้อยู่ด้านบนและชิดซ้าย/ขวา)
+   ======================================================== */
+
+/* คลาสให้อยู่ด้านบนตรงกลาง (สำหรับ Card กลาง) */
+.highlight-box.tooltip-top:hover::before {
+    bottom: 100%; /* ดันขึ้นไปด้านบน */
+    margin-bottom: 8px; /* ระยะห่างจากกล่อง */
+}
+
+/* คลาสให้อยู่ด้านบนและชิดซ้าย (สำหรับ Card ซ้ายสุด) */
+.highlight-box.tooltip-top-left:hover::before {
+    bottom: 100%; /* ดันขึ้นไปด้านบน */
+    margin-bottom: 8px;
+    left: 0;
+    transform: translateX(0); /* ยกเลิกการดึงกลับตรงกลาง */
+    text-align: left;
+}
+
+/* คลาสให้อยู่ด้านบนและชิดขวา (สำหรับ Card ขวาสุด) */
+.highlight-box.tooltip-top-right:hover::before {
+    bottom: 100%; /* ดันขึ้นไปด้านบน */
+    margin-bottom: 8px;
+    left: auto;
+    right: 0; /* ดึงชิดขวา */
+    transform: translateX(0);
+    text-align: right;
+}
